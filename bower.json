@@ -1,0 +1,21 @@
+{
+  "name": "lunchforskills",
+  "version": "0.0.0",
+  "authors": [
+    "Oleg Polyakov <opolyo01@yahoo.com>"
+  ],
+  "description": "react-bootstrap with no need for dependency management",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react-bootstrap": "~0.13.0"
+  }
+}

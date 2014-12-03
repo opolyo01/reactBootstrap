@@ -1,0 +1,167 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<style>
+    #container div{
+        margin-top: 20px;
+    }
+</style>
+<div id="container">
+    <div id="buttons"></div>
+    <div id="buttonGroupInstance"></div>
+    <div id="listgroupInstance"></div>
+    <!-- <div id="modalInstance"></div> -->
+    <div id="tableInstance"></div>
+</div>
+
+<script src="bower_components/react/react.min.js"></script>
+<script src="bower_components/react/JSXTransformer.js"></script>
+<script src="bower_components/react-bootstrap/react-bootstrap.min.js"></script>
+
+<script type="text/jsx">
+/** @jsx React.DOM */
+'use strict';
+
+var Accordion= ReactBootstrap.Accordion,
+    Affix= ReactBootstrap.Affix,
+    AffixMixin= ReactBootstrap.AffixMixin,
+    Alert= ReactBootstrap.Alert,
+    BootstrapMixin= ReactBootstrap.BootstrapMixin,
+    Badge= ReactBootstrap.Badge,
+    Button= ReactBootstrap.Button,
+    ButtonGroup= ReactBootstrap.ButtonGroup,
+    ButtonToolbar= ReactBootstrap.ButtonToolbar,
+    Carousel= ReactBootstrap.Carousel,
+    CarouselItem= ReactBootstrap.CarouselItem,
+    Col= ReactBootstrap.Col,
+    CollapsableMixin= ReactBootstrap.CollapsableMixin,
+    DropdownButton= ReactBootstrap.DropdownButton,
+    DropdownMenu= ReactBootstrap.DropdownMenu,
+    DropdownStateMixin= ReactBootstrap.DropdownStateMixin,
+    FadeMixin= ReactBootstrap.FadeMixin,
+    Glyphicon= ReactBootstrap.Glyphicon,
+    Grid= ReactBootstrap.Grid,
+    Input= ReactBootstrap.Input,
+    Interpolate= ReactBootstrap.Interpolate,
+    Jumbotron= ReactBootstrap.Jumbotron,
+    Label= ReactBootstrap.Label,
+    ListGroup= ReactBootstrap.ListGroup,
+    ListGroupItem= ReactBootstrap.ListGroupItem,
+    MenuItem= ReactBootstrap.MenuItem,
+    Modal= ReactBootstrap.Modal,
+    Nav= ReactBootstrap.Nav,
+    Navbar= ReactBootstrap.Navbar,
+    NavItem= ReactBootstrap.NavItem,
+    ModalTrigger= ReactBootstrap.ModalTrigger,
+    OverlayTrigger= ReactBootstrap.OverlayTrigger,
+    OverlayMixin= ReactBootstrap.OverlayMixin,
+    PageHeader= ReactBootstrap.PageHeader,
+    Panel= ReactBootstrap.Panel,
+    PanelGroup= ReactBootstrap.PanelGroup,
+    PageItem= ReactBootstrap.PageItem,
+    Pager= ReactBootstrap.Pager,
+    Popover= ReactBootstrap.Popover,
+    ProgressBar= ReactBootstrap.ProgressBar,
+    Row= ReactBootstrap.Row,
+    SplitButton= ReactBootstrap.SplitButton,
+    SubNav= ReactBootstrap.SubNav,
+    TabbedArea= ReactBootstrap.TabbedArea,
+    Table= ReactBootstrap.Table,
+    TabPane= ReactBootstrap.TabPane,
+    Tooltip= ReactBootstrap.Tooltip,
+    Well= ReactBootstrap.Well;
+
+var buttonsInstance = (
+    <ButtonToolbar>
+      <Button bsStyle="primary" bsSize="large" active>Primary button</Button>
+      <Button bsSize="large" active>Button</Button>
+    </ButtonToolbar>
+  );
+
+var buttonGroupInstance = (
+    <ButtonToolbar>
+      <ButtonGroup>
+        <Button>1</Button>
+        <Button>2</Button>
+        <Button>3</Button>
+        <Button>4</Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button>5</Button>
+        <Button>6</Button>
+        <Button>7</Button>
+      </ButtonGroup>
+
+      <ButtonGroup>
+        <Button>8</Button>
+      </ButtonGroup>
+    </ButtonToolbar>
+  );
+
+function handleHide() {
+  alert('Close me!')
+}
+
+var modalInstance = (
+    <div className="static-modal">
+      <Modal title="Modal title"
+        backdrop={false}
+        animation={false}
+        onRequestHide={handleHide}>
+        <div className="modal-body">
+          One fine body...
+        </div>
+        <div className="modal-footer">
+          <Button>Close</Button>
+          <Button bsStyle="primary">Save changes</Button>
+        </div>
+      </Modal>
+    </div>
+  );
+
+var tableInstance = (
+    <Table striped bordered condensed hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colSpan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
+  );
+
+var listgroupInstance = (
+    <ListGroup>
+      <ListGroupItem href="#" active>Link 1</ListGroupItem>
+      <ListGroupItem href="#">Link 2</ListGroupItem>
+      <ListGroupItem href="#" disabled>Link 3</ListGroupItem>
+    </ListGroup>
+  );
+
+React.render(buttonsInstance, document.getElementById("buttons"));
+React.render(buttonGroupInstance, document.getElementById("buttonGroupInstance"));
+//React.render(modalInstance, document.getElementById("modalInstance"));
+React.render(tableInstance, document.getElementById("tableInstance"));
+React.render(listgroupInstance, document.getElementById("listgroupInstance"));
+
+</script>            
